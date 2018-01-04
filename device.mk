@@ -238,10 +238,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.montana \
     lights.msm8937
 
-# LineageActions
-PRODUCT_PACKAGES += \
-    LineageActions
-
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -265,6 +261,10 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/configs/media_codecs_vendor_audio.xml:system/vendor/etc/media_codecs_vendor_audio.xml \
     $(LOCAL_PATH)/configs/media_codecs_8937_v1.xml:system/vendor/etc/media_codecs_8937_v1.xml \
     $(LOCAL_PATH)/configs/media_codecs_vendor.xml:system/vendor/etc/media_codecs_vendor.xml
+
+# MotoActions
+PRODUCT_PACKAGES += \
+    MotoActions
 
 # Netutils
 PRODUCT_PACKAGES += \

@@ -325,6 +325,12 @@
         <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
    </string-array>
 
+    <!-- Paths to the libraries that contain device specific key handlers -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>
+
+    <!-- Names of the key handler classes -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>
+
     <!-- Control whether Night display is available. This should only be enabled on devices
          that have a HWC implementation that can apply the matrix passed to setColorTransform
          without impacting power, performance, and app compatibility (e.g. protected content). -->
