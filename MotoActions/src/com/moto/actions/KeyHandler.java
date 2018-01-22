@@ -623,26 +623,6 @@ public class KeyHandler implements DeviceKeyHandler {
         mVibrator.vibrate(intensity);
     }
 
-    private void goToPipMode() {
-        ActivityInfo ai = getRunningActivityInfo(mContext);
-        if (ai != null && !ai.supportsPictureInPicture()) {
-            try {
-                PackageManager pm = mContext.getPackageManager();
-                Resources resources = pm.getResourcesForApplication("com.moto.actions");
-                int resId = resources.getIdentifier("app_does_not_support_pip", "string", "com.moto.actions");
-                final String text = resources.getString(resId);
-                mHandler.post(new Runnable() {
-                    public void run() {
-                        Toast.makeText(mContext, text, Toast.LENGTH_SHORT).show();
-                    }
-                });
-            } catch (Exception e) {
-            }
-            return;
-        }
-        triggerVirtualKeypress(mHandler, 171);
-    }
-
     private void toggleScreenState() {
         if (mPowerManager.isScreenOn()) {
             mPowerManager.goToSleep(SystemClock.uptimeMillis());
