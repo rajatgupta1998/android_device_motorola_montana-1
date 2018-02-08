@@ -15,30 +15,30 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.doze;
+package com.moto.actions.doze;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
-import org.lineageos.settings.device.SensorAction;
-import org.lineageos.settings.device.SensorHelper;
+import com.moto.actions.MotoActionsSettings;
+import com.moto.actions.SensorAction;
+import com.moto.actions.SensorHelper;
 
-public class GlanceSensor implements ScreenStateNotifier, SensorEventListener {
-    private static final String TAG = "LineageActions-GlanceSensor";
+public class GlanceSensor implements ScreenStateNotifier {
+    private static final String TAG = "MotoActions-GlanceSensor";
 
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
     private final Sensor mSensor;
 
     private boolean mEnabled;
 
-    public GlanceSensor(LineageActionsSettings lineageActionsSettings, SensorHelper sensorHelper,
+    public GlanceSensor(MotoActionsSettings motoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = motoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
@@ -49,27 +49,29 @@ public class GlanceSensor implements ScreenStateNotifier, SensorEventListener {
     public void screenTurnedOn() {
         if (mEnabled) {
             Log.d(TAG, "Disabling");
-            mSensorHelper.unregisterListener(this);
+            mSensorHelper.unregisterListener(mGlanceListener);
             mEnabled = false;
         }
     }
 
     @Override
     public void screenTurnedOff() {
-        if (mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
+        if (mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
-            mSensorHelper.registerListener(mSensor, this);
+            mSensorHelper.registerListener(mSensor, mGlanceListener);
             mEnabled = true;
         }
     }
 
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        Log.d(TAG, "triggered");
-        mSensorAction.action();
-    }
+    private SensorEventListener mGlanceListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            Log.d(TAG, "triggered");
+            mSensorAction.action();
+        }
 
-    @Override
-    public void onAccuracyChanged(Sensor mSensor, int accuracy) {
-    }
+        @Override
+        public void onAccuracyChanged(Sensor mSensor, int accuracy) {
+        }
+    };
 }

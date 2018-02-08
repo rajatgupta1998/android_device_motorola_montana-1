@@ -27,21 +27,6 @@ import android.util.Log;
 import java.util.List;
 import java.util.LinkedList;
 
-import org.lineageos.settings.device.actions.UpdatedStateNotifier;
-import org.lineageos.settings.device.actions.CameraActivationSensor;
-import org.lineageos.settings.device.actions.ChopChopSensor;
-import org.lineageos.settings.device.actions.FlipToMute;
-import org.lineageos.settings.device.actions.LiftToSilence;
-import org.lineageos.settings.device.actions.ProximitySilencer;
-
-import org.lineageos.settings.device.doze.DozePulseAction;
-import org.lineageos.settings.device.doze.GlanceSensor;
-import org.lineageos.settings.device.doze.ProximitySensor;
-import org.lineageos.settings.device.doze.ScreenReceiver;
-import org.lineageos.settings.device.doze.ScreenStateNotifier;
-import org.lineageos.settings.device.doze.StowSensor;
-
-public class LineageActionsService extends IntentService implements ScreenStateNotifier,
 import com.moto.actions.actions.UpdatedStateNotifier;
 import com.moto.actions.actions.CameraActivationSensor;
 import com.moto.actions.actions.ChopChopSensor;
@@ -86,11 +71,7 @@ public class MotoActionsService extends IntentService implements ScreenStateNoti
         mScreenStateNotifiers.add(mDozePulseAction);
 
         // Actionable sensors get screen on/off notifications
-        mScreenStateNotifiers.add(new GlanceSensor(lineageActionsSettings, mSensorHelper, mDozePulseAction));
-        mScreenStateNotifiers.add(new ProximitySensor(lineageActionsSettings, mSensorHelper, mDozePulseAction));
-        mScreenStateNotifiers.add(new StowSensor(lineageActionsSettings, mSensorHelper, mDozePulseAction));
-
-        //mScreenStateNotifiers.add(new GlanceSensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
+        mScreenStateNotifiers.add(new GlanceSensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
         mScreenStateNotifiers.add(new ProximitySensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
         mScreenStateNotifiers.add(new StowSensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
 
