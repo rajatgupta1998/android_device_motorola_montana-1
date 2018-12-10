@@ -99,7 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=384m \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75 \
-	dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
     dalvik.vm.dex2oat-threads=8 \
     dalvik.vm.image-dex2oat-threads=8
 
@@ -269,6 +269,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vendor Extension
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.at_library=libqti-at.so \
-    ro.vendor.gt_library=libqti-gt.so
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.at_library=libqti-at.so \
+ro.vendor.gt_library=libqti-gt.so
+persist.vendor.radio.force_on_dc=true \
+persist.radio.custom_ecc=1 \
+persist.radio.data_con_rprt=1 \
+persist.vendor.radio.data_ltd_sys_ind=1 \
+persist.radio.data_ltd_sys_ind=1 \
+persist.vendor.radio.ignore_dom_time=10 \
+persist.radio.ignore_dom_time=10 \
+persist.radio.rat_on=combine \
+persist.radio.is_wps_enabled=true \
+persist.radio.videopause.mode=1 \
+persist.radio.sap_silent_pin=1 \
+persist.radio.always_send_plmn=true \
+persist.rcs.supported=1 \
+persist.dbg.ims_volte_enable=1 \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.dbg.wfc_avail_ovr=1 \
+persist.radio.data_lte_sys_ind=1
+
+# Spectrum
+PRODUCT_PROPERTY_OVERRIDES += \
+    spectrum.support=1 \
+    persist.spectrum.kernel=MAYHEM

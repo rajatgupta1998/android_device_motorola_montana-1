@@ -324,7 +324,13 @@ PRODUCT_PACKAGES += \
     init.montana.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
-    ueventd.qcom.rc
+    init.qcom.sensors.sh \
+    init.montana.rc \
+    init.spectrum.rc \
+    init.spectrum.sh
+
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/rootdir/etc/ueventd.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -338,7 +344,7 @@ PRODUCT_COPY_FILES += \
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
-
+b0cbed7cf238b5e4231437e916605e424670f7ad
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
