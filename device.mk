@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libbson \
+    libbson.vendor
     Camera2 \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
