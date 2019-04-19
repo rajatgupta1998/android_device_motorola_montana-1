@@ -17,6 +17,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(TARGET_USE_SHIMS), true)
+
 # ADSP
 include $(CLEAR_VARS)
 LOCAL_C_INCLUDES := external/tinyalsa/include
@@ -32,6 +34,8 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libqsap_shim.c
 LOCAL_SHARED_LIBRARIES := libqsap_sdk liblog libcutils libutils
 LOCAL_C_INCLUDES := $(TOP)/system/qcom/softap/sdk
+LOCAL_C_FLAGS := -Wno-error
+LOCAL_HEADER_LIBRARIES := libutils_headers
 LOCAL_MODULE := libqsap_shim
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
@@ -52,3 +56,5 @@ LOCAL_MODULE := libjustshoot_shim
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+endif
