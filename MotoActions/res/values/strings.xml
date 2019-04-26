@@ -90,6 +90,13 @@
    <string name="haptic_feedback_summary">Vibrate when a touchscreen gesture is detected</string>
 
     <!-- Dirac settings -->
+    <!-- Label for feature switch [CHAR LIMIT=30] -->
+    <string name="switch_bar_on">On</string>
+ 
+    <!-- Label for feature switch [CHAR LIMIT=30] -->
+    <string name="switch_bar_off">Off</string>
+ 
+    <string name="sound_title">Dirac</string>
     <string name="dirac_title">Dirac sound enhancer</string>
     <string name="dirac_summary">Optimize audio quality</string>
     <string name="dirac_headset_title">Choose headphone type</string>
