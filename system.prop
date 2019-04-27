@@ -1,6 +1,9 @@
 # system.prop for montana
 #
 
+# Updater
+cm.updater.uri=https://raw.githubusercontent.com/montanadevelopment/releases/master/lineage14.1.json
+
 # RILD
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
