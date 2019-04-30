@@ -14,14 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/montana/full_montana.mk)
-
 # Inherit base telephony stuff
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit CM stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Boot animation
@@ -37,5 +33,6 @@ PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := montana
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=7.1.1/NPP26.102-19/22:user/release-keys \
-    PRIVATE_BUILD_DESC="7.1.1/NPP26.102-19/22:user/release-keys"
+    PRIVATE_BUILD_DESC="montana-user 7.1.1 NPP26.102-19 22 release-keys"
+
+BUILD_FINGERPRINT=7.1.1/NPP26.102-19/22:user/release-keys
