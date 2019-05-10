@@ -66,8 +66,27 @@ void vendor_load_properties()
 
         return;
 
+    // sku
     std::string sku = property_get("ro.boot.hardware.sku");
-    property_override("ro.product.model", sku.c_str());
+    if (sku == "XT1790") {
+    property_override("ro.product.model", "Moto G5S (XT1790)");
+    } else if (sku == "XT1791") {
+    property_override("ro.product.model", "Moto G5S (XT1791)");
+    } else if (sku == "XT1792") {
+    property_override("ro.product.model", "Moto G5S (XT1792)");
+    } else if (sku == "XT1793") {
+    property_override("ro.product.model", "Moto G5S (XT1793)");
+    } else if (sku == "XT1794") {
+    property_override("ro.product.model", "Moto G5S (XT1794)");
+    } else if (sku == "XT1795") {
+    property_override("ro.product.model", "Moto G5S (XT1795)");
+    } else if (sku == "XT1796") {
+    property_override("ro.product.model", "Moto G5S (XT1796)");
+    } else if (sku == "XT1797") {
+    property_override("ro.product.model", "Moto G5S (XT1797)");
+    } else if (sku == "XT1799-2") {
+    property_override("ro.product.model", "Moto G5S (XT1799-2)");
+    }
 
     // rmt_storage
     std::string device = property_get("ro.boot.device");
