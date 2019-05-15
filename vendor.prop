@@ -2,6 +2,9 @@
 # system.prop for montana
 #
 
+# Navigation Bar
+qemu.hw.mainkeys=0
+
 # Updater
 lineage.updater.uri=https://raw.githubusercontent.com/montanadevelopment/releases/master/lineage16.json
 
