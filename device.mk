@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Proprietary
 $(call inherit-product, vendor/motorola/montana/montana-vendor.mk)
 
+# Build Props
+$(call inherit-product, device/motorola/montana/vendor_prop.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
