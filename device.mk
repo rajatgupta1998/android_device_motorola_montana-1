@@ -21,6 +21,7 @@ $(call inherit-product, vendor/motorola/montana/montana-vendor.mk)
 
 # Build Props
 $(call inherit-product, device/motorola/montana/vendor_prop.mk)
+$(call inherit-product, device/motorola/montana/system_prop.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
