@@ -29,7 +29,7 @@ if [[ ! -d "$MY_DIR" ]]; then export MY_DIR="$PWD"; fi
 
 export LINEAGE_ROOT="$MY_DIR"/../../..
 
-export HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
+export HELPER="$LINEAGE_ROOT"/vendor/rr/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
