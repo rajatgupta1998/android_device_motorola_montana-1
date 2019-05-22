@@ -333,7 +333,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service-qti
+    android.hardware.power@1.1-service-qti \
+    vendor.lineage.power@1.0_vendor
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -417,7 +418,8 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermal-engine-montana.conf:$(TARGET
 
 # Touch HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.montana
+    vendor.lineage.touch@1.0-service.montana \
+    vendor.lineage.touch@1.0_vendor
 
 # Trust HAL
 PRODUCT_PACKAGES += \
