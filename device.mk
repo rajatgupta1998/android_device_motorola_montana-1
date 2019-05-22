@@ -159,7 +159,8 @@ PRODUCT_PACKAGES += \
 # Display Calibration
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+    vendor.lineage.livedisplay@2.0-service-sysfs \
+    vendor.lineage.livedisplay@2.0_vendor
 
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_vid_inx_1080p_497.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_inx_1080p_497.xml \
@@ -305,7 +306,9 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag \
     com.android.nfc_extras \
-    android.hardware.nfc@1.1-service
+    android.hardware.nfc@1.1-service \
+    vendor.nxp.nxpese@1.0_vendor \
+    vendor.nxp.nxpnfc@1.0_vendor
 
 # NFC Configuration
 PRODUCT_COPY_FILES += \
@@ -423,7 +426,8 @@ PRODUCT_PACKAGES += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+    vendor.lineage.trust@1.0-service \
+    vendor.lineage.trust@1.0_vendor
 
 # USB HAL
 PRODUCT_PACKAGES += \
