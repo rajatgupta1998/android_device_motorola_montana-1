@@ -28,8 +28,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
-ifeq ($(TARGET_USE_SHIMS), true)
-
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libqsap_shim.c
 LOCAL_SHARED_LIBRARIES := libqsap_sdk liblog libcutils libutils
@@ -49,7 +47,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
- include $(CLEAR_VARS)
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES := justshoot_shim.cpp
 LOCAL_SHARED_LIBRARIES := libutils
 LOCAL_MODULE := libjustshoot_shim
