@@ -424,7 +424,7 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermal-engine-montana.conf:$(TARGET
 
 # Touch HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.montana \
+    vendor.lineage.touch@1.0-service \
     vendor.lineage.touch@1.0_vendor
 
 # Trust HAL
