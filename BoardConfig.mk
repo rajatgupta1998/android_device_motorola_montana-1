@@ -228,9 +228,6 @@ VENDOR_SECURITY_PATCH := 2019-02-01
 include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# Shims
-TARGET_USE_SHIMS := true
-
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
