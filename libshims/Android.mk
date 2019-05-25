@@ -17,8 +17,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_USE_SHIMS), true)
-
 # ADSP
 include $(CLEAR_VARS)
 LOCAL_C_INCLUDES := external/tinyalsa/include
@@ -46,5 +44,3 @@ LOCAL_MODULE := libjustshoot_shim
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
-
-endif
