@@ -14,12 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-export DEVICE=montana
-export VENDOR=motorola
-
-export DEVICE_BRINGUP_YEAR=2018
-
 set -e
+
+DEVICE=montana
+VENDOR=motorola
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -59,6 +57,5 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
-extract "$MY_DIR"/proprietary-files64.txt "$SRC" "$SECTION"
 
 "$MY_DIR"/setup-makefiles.sh

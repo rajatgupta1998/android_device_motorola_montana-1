@@ -18,12 +18,9 @@
 set -e
 
 export DEVICE=montana
-export DEVICE_COMMON=msm8953-common
 export VENDOR=motorola
 
-export DEVICE_BRINGUP_YEAR=2018
-
-INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
+export INITIAL_COPYRIGHT_YEAR=2018
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -47,9 +44,5 @@ write_headers
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
-# ARM64 blobs
-write_makefiles "$MY_DIR"/proprietary-files64.txt
-
 # We are done!
 write_footers
-
