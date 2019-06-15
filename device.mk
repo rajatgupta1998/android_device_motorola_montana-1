@@ -141,9 +141,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8937_mot_montana_camera.xml:system/etc/camera/msm8937_mot_montana_camera.xml \
     $(LOCAL_PATH)/configs/camera/s5k3p3_chromatix.xml:system/etc/camera/s5k3p3_chromatix.xml
 
-# CM
+# CMActions
 PRODUCT_PACKAGES += \
-    MotoActions
+    CMActions
 
 PRODUCT_PACKAGES += \
     Launcher3
