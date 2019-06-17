@@ -173,8 +173,8 @@ BOARD_HARDWARE_CLASS += \
     $(DEVICE_PATH)/lineagehw
 
 # Manifest
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
-DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # NFC
 NXP_CHIP_TYPE := pn544
