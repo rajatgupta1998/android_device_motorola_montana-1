@@ -177,7 +177,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/compatibility_matrix.xml
 
 # NFC
-NXP_CHIP_TYPE := PN551
+NXP_CHIP_TYPE := pn544
 BOARD_NFC_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)
 
 # Partitions
