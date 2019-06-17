@@ -239,7 +239,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0
 
 # Sensors
-ro.hardware.sensors=montana
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.sensors=montana
 
 #Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -261,4 +262,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.at_library=libqti-at.so \
     ro.vendor.gt_library=libqti-gt.so
-
