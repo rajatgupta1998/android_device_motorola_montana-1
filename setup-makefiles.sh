@@ -17,7 +17,6 @@
 
 set -e
 
-# Required!
 DEVICE=montana
 VENDOR=motorola
 

@@ -17,8 +17,9 @@
 #
 
 set -e
-export DEVICE=montana
-export VENDOR=motorola
+
+DEVICE=montana
+VENDOR=motorola
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -53,10 +54,4 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" true
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
-    extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC"
-fi
-
-"$MY_DIR"/setup-makefiles.sh 
+"$MY_DIR"/setup-makefiles.sh
