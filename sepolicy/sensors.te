@@ -1,1 +1,4 @@
 allow sensors persist_file:file { getattr read write open };
+allow sensors persist_file:dir { getattr search };
+allow sensors self:capability dac_override;
+
