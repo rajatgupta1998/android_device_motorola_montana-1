@@ -24,7 +24,7 @@ $(call inherit-product, device/motorola/montana/device.mk)
 $(call inherit-product, vendor/motorola/montana/montana-vendor.mk)
 
 # Inherit from the common LineageOS product configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -39,7 +39,7 @@ TARGET_SCREEN_HEIGHT := 1920
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_CONFIG := normal
 
-PRODUCT_NAME := lineage_montana
+PRODUCT_NAME := potato_montana
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := montana
 PRODUCT_MODEL := Moto G5S
