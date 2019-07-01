@@ -401,7 +401,10 @@ PRODUCT_PACKAGES += \
 
 # Touch HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.montana \
+    vendor.lineage.touch@1.0-service.montana
+
+# Trust HAL
+PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 
 # USB HAL
