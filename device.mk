@@ -309,11 +309,11 @@ PRODUCT_COPY_FILES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service-qti
+    android.hardware.power@1.2-service
 
 # Powerhint configuration file
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml \
+    $(LOCAL_PATH)/configs/powerhint.xml:system/vendor/etc/powerhint.xml \
     $(LOCAL_PATH)/configs/perfboostsconfig.xml:system/vendor/etc/perf/perfboostsconfig.xml
 
 # Ramdisk
