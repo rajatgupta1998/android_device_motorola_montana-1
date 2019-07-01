@@ -61,3 +61,6 @@ allow init sysfs_battery_supply:lnk_file {open read };
 allow init sysfs_fpc:file { rw_file_perms setattr };
 allow init proc:file { open write };
 allow init sysfs_capsense:file setattr;
+allow init sysfs_sec_tsp:lnk_file read;
+allow init sysfs_sec_touchkey:file setattr;
+allow init sysfs_sec_tsp:file setattr;

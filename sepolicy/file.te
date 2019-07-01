@@ -40,6 +40,8 @@ type sysfs_capsense, fs_type, sysfs_type;
 type sysfs_batt, fs_type, sysfs_type;
 type sysfs_cnss, fs_type, sysfs_type;
 type sysfs_fpc, fs_type, sysfs_type;
+type sysfs_sec_touchkey, fs_type, sysfs_type;
+type sysfs_sec_tsp, fs_type, sysfs_type;
 
 type fpc_socket, file_type, data_file_type, core_data_file_type;
 type fpc_data_file, file_type, data_file_type, core_data_file_type;
