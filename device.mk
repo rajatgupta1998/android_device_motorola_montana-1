@@ -324,8 +324,6 @@ PRODUCT_PACKAGES += \
     init.montana.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
-    init.qcom.sensors.sh \
-    init.montana.rc \
     init.spectrum.rc \
     init.spectrum.sh
 
