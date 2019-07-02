@@ -5,6 +5,4 @@ type touch_prop, property_type;
 type diag_prop, property_type;
 type thermal_prop, property_type;
 type qti_telephony_prop, property_type;
-type hal_cne_hwservice, property_type;
-type sysfs_adsp, property_type;
-type hal_fingerprint_fpc, property_type;
+
