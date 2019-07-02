@@ -41,7 +41,7 @@ on property:persist.spectrum.profile=0
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 450000000
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 512
