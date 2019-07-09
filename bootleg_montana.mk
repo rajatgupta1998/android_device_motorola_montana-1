@@ -23,8 +23,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/motorola/montana/device.mk)
 $(call inherit-product, vendor/motorola/montana/montana-vendor.mk)
 
-# Inherit from the common LineageOS product configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from the common Bootleggers product configuration.
+$(call inherit-product, vendor/bootleggers/config/common.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -35,11 +35,13 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
+TARGET_PICK_BOOTANIMATION := 0,1,2
+
 
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_CONFIG := normal
 
-PRODUCT_NAME := lineage_montana
+PRODUCT_NAME := bootleg_montana
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := montana
 PRODUCT_MODEL := Moto G5S
