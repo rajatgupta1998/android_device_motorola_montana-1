@@ -17,10 +17,10 @@
 
 set -e
 
-export DEVICE=montana
-export VENDOR=motorola
+DEVICE=montana
+VENDOR=motorola
 
-export INITIAL_COPYRIGHT_YEAR=2018
+INITIAL_COPYRIGHT_YEAR=2018
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -36,7 +36,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 # Copyright headers and guards
 write_headers
