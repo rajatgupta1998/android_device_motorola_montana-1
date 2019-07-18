@@ -55,19 +55,6 @@ void property_override_dual(char const system_prop[], char const vendor_prop[],
     property_override(vendor_prop, value);
 }
 
-void num_sims() {
-    std::string dualsim;
-
-    dualsim = android::base::GetProperty("ro.boot.dualsim", "");
-    property_set("ro.hw.dualsim", dualsim.c_str());
-
-    if (dualsim == "true") {
-        property_set("persist.radio.multisim.config", "dsds");
-    } else {
-        property_set("persist.radio.multisim.config", "");
-    }
-}
-
 void vendor_load_properties()
 {
     std::string platform = android::base::GetProperty("ro.board.platform", "");
@@ -91,5 +78,4 @@ void vendor_load_properties()
     property_set("ro.hw.imager", "16MP");
     property_set("ro.hw.ecompass", "false");
     property_set("ro.hw.nfc", "true");
-    num_sims();
 }
