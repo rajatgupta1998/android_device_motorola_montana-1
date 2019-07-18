@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-sku=`getprop ro.boot.hardware.sku`
+radio=`getprop ro.boot.radio`
 
 remove_nfc() {
     rm /system/vendor/etc/permissions/android.hardware.nfc.xml
@@ -9,12 +9,12 @@ remove_nfc() {
     rm -r /system/app/NfcNci
 }
 
-if [ "$sku" == "XT1790" ]  || [ "$sku" == "XT1792" ] || [ "$sku" == "XT1795" ]; then
-    # XT1790, XT1792 and XT1795 don't have NFC
+if [ "$radio" != "APAC" ]  || [ "$radio" != "EMEA" ]; then
+    # APAC and EMEA radios have NFC
     remove_nfc
 fi
 
-if [ "$sku" != "XT1790" ] || [ "$sku" != "XT1792" ] || [ "$sku" != "XT1795" ]; then
-    # XT1790,XT1792 and XT1795 have a compass
+if [ "$radio" != "Brazil" ]  || [ "$radio" != "LATAM" ]; then
+    # Brazil and LATAM radios have compasses
     rm /system/vendor/etc/permissions/android.hardware.sensor.compass.xml
 fi
