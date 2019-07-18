@@ -298,7 +298,7 @@ service sensors /system/vendor/bin/sensors.qcom
     user root
     group root
 
-service charge_only_mode /system/bin/charge_only_mode
+service charge_only_mode /system/vendor/bin/charge_only_mode
     user root
     group graphics system input
     disabled
