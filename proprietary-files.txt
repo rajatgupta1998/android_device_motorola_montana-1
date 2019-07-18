@@ -1,7 +1,7 @@
 # Proprietary files for montana
 
 -app/QtiTelephonyService/QtiTelephonyService.apk
--app/TimeService/TimeService.apk
+-app/TimeService/TimeService.apk:vendor/app/TimeService/TimeService.apk
 -app/embms/embms.apk
 -app/ims/ims.apk
 -app/imssettings/imssettings.apk
