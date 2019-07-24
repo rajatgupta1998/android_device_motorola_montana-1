@@ -29,12 +29,8 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
 TARGET_BOARD_SUFFIX := _64
 
 # Bootloader
@@ -47,7 +43,7 @@ TW_HAS_EDL_MODE := true
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-BOARD_KERNEL_CMDLINE := androidboot.bootdevice=7824900.sdhci androidboot.console=ttyHSL0 androidboot.hardware=qcom console=ttyHSL0,115200,n8 earlycon=msm_hsl_uart,0x78B0000 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 user_debug=30 vmalloc=400M androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.bootdevice=7824900.sdhci androidboot.console=ttyHSL0 androidboot.hardware=qcom console=ttyHSL0,115200,n8 earlycon=msm_hsl_uart,0x78B0000 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 user_debug=30 vmalloc=400M androidboot.selinux=permissive  skip_initramfs ro rootwait init=/init
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -78,6 +74,7 @@ TW_INCLUDE_FUSE_EXFAT := true # exFAT support
 TW_INCLUDE_FUSE_NTFS := true # NTFS support
 
 # Partitions
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216    # mmcblk0p37

@@ -2,6 +2,7 @@ import init.target.recovery.rc
 
 on fs
     symlink /dev/block/bootdevice/by-name/oem /dev/block/bootdevice/by-name/vendor
+    export ANDROID_ROOT /system_root
 
 # separate copy needed to use /sbin/linker instead of /system/bin/linker
 service sbinqseecomd /sbin/qseecomd
