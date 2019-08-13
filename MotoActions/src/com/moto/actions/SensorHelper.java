@@ -62,7 +62,8 @@ public class SensorHelper {
             }
             writer.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            Log.i("SensorException","Sensor not found on sensors.txt");
+            //throw new RuntimeException(e);
         }
     }
 
@@ -95,12 +96,30 @@ public class SensorHelper {
     }
 
     public void registerListener(Sensor sensor, SensorEventListener listener) {
-        if (!mSensorManager.registerListener(listener, sensor,
-            SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000)) {
-            throw new RuntimeException("Failed to registerListener for sensor " + sensor);
+        
+        if(listener == null){
+            Log.i("registerListener Error","Listener Null!");
+            return;
         }
+        if(sensor == null){
+            Log.i("registerListener Error","Sensor Null!");
+            return;
+        }
+
+        try {     
+               if (!mSensorManager.registerListener(listener, sensor,
+                   SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000)) {
+                   //throw new RuntimeException("Failed to registerListener for sensor " + sensor);
+                   Log.i("Native Error","Failed to registerListener for sensor " + sensor);
+                   }
+            }
+        catch (Exception e) {
+            Log.i("mSensorManager Error","listener or sensor still null");
+            return;
+                }
     }
 
+    
     public void unregisterListener(SensorEventListener listener) {
         mSensorManager.unregisterListener(listener);
     }
@@ -108,7 +127,8 @@ public class SensorHelper {
     /* TriggerSensor */
     public void requestTriggerSensor(Sensor sensor, TriggerEventListener listener) {
         if (!mSensorManager.requestTriggerSensor(listener, sensor)) {
-            throw new RuntimeException("Failed to requestTriggerSensor for sensor " + sensor);
+            //throw new RuntimeException("Failed to requestTriggerSensor for sensor " + sensor);
+            Log.i("requestTriggerSensor Exception","Failed to requestTriggerSensor for sensor " + sensor);
         }
     }
 
